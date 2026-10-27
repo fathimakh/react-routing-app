@@ -36,6 +36,11 @@
   box-sizing: border-box;
 }
 
+/* Keep anything scrolled into view (e.g. by Tab) clear of the sticky navbar. */
+html {
+  scroll-padding-top: calc(var(--navbar-height) + 1rem);
+}
+
 body {
   margin: 0;
   min-width: 320px;
@@ -71,7 +76,7 @@ code {
 }
 
 :focus-visible {
-  outline: 3px solid rgb(79 70 229 / 0.45);
+  outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
 
@@ -340,6 +345,11 @@ code {
   margin-top: 1.75rem;
 }
 
+/* Long unknown URLs wrap instead of pushing the card off-screen. */
+.empty-state code {
+  overflow-wrap: anywhere;
+}
+
 /* ==========================================================================
    Home
    ========================================================================== */
@@ -457,7 +467,7 @@ code {
    ========================================================================== */
 .user-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
   gap: 1rem;
   margin: 0;
   padding: 0;
@@ -556,7 +566,7 @@ code {
 
 .profile-details {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   gap: 1rem;
   margin: 0;
   padding: 2rem;
@@ -596,7 +606,7 @@ code {
 
 @media (max-width: 600px) {
   .container {
-    padding: 0 1rem;
+    padding-inline: 1rem;
   }
 
   .main {
