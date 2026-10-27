@@ -115,7 +115,7 @@ react-routing-app/
 
 ## Getting started
 
-**Requirements:** Node.js 20.19+ or 22.12+ and npm.
+**Requirements:** Node.js 20.19+, 22.13+ or 24+ and npm.
 
 ```bash
 # 1. Install dependencies
