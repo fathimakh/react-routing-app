@@ -6,7 +6,7 @@ UserHub is a small user directory built with **React** and **React Router (`reac
 (Home, About, Users and User Detail), a persistent navigation bar that highlights the current page, a
 parameterised route (`/users/:id`) and a responsive layout written in plain CSS.
 
-> **GitHub repository:** _add the link here after pushing_
+> **GitHub repository:** https://github.com/fathimakh/react-routing-app
 
 ![Home page](screenshots/01-home.png)
 

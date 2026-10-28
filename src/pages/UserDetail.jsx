@@ -30,7 +30,7 @@ export default function UserDetail() {
 
   const details = [
     { label: 'User ID', value: user.id },
-    { label: 'Email', value: <a href={`mailto:${user.email}`}>{user.email}</a> },
+    { label: 'Email', value: user.email },
     { label: 'Phone', value: user.phone },
     { label: 'Role', value: user.role },
     { label: 'Company', value: user.company },
